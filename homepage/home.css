@@ -1,0 +1,110 @@
+/* Grundlegende Stile für den gesamten Body */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Navigationsleiste */
+header {
+    background-color: black;
+    padding: 20px 0; /* Vergrößert die vertikale Höhe */
+    text-align: left; /* Links bündig */
+    padding-left: 20px; /* Abstand vom linken Rand */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ddd;
+}
+
+/* Hauptinhalt */
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column; /* Ändert die Flex-Richtung zu einer Spalte */
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    padding: 20px;
+}
+
+main h1 {
+    margin-bottom: 50px; /* Fügt einen Abstand unterhalb des h1-Tags hinzu */
+    text-align: center; /* Zentriert den Text */
+    color: white; /* Ändert die Textfarbe */
+}
+
+/* Berechnungsbutton */
+.calculate-button {
+    display: inline-block;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    height: 150px;
+    width: 180px;
+    padding: 100px 250px;
+    border-radius: 12px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Stile für den Text im Button */
+.button-text {
+    font-size: 40px;
+    display: inline-block; /* Um die Breite an den Text anzupassen */
+    text-align: center; /* Zentrierte Ausrichtung des Textes */
+}
+
+.giphy-embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.calculate-button:hover .giphy-embed {
+    opacity: 0.7;
+}
+
+.calculate-button:hover span {
+    display: none;
+}
+
+.calculate-button:hover {
+    background-color: black;
+    color: white;
+}
+
+/* Footer */
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}

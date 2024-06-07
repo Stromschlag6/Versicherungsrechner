@@ -13,6 +13,7 @@ header {
     padding: 20px 0; /* Vergrößert die vertikale Höhe */
     text-align: left; /* Links bündig */
     padding-left: 20px; /* Abstand vom linken Rand */
+    border-bottom: 2px solid white;
 }
 
 nav ul {
@@ -56,25 +57,39 @@ main h1 {
 
 /* Berechnungsbutton */
 .calculate-button {
-    display: inline-block;
+    display: flex; /* Verwende Flexbox */
+    justify-content: center; /* Horizontale Zentrierung */
+    align-items: center; /* Vertikale Zentrierung */
     background-color: #333;
     color: white;
     text-decoration: none;
-    font-size: 24px;
-    height: 150px;
-    width: 180px;
-    padding: 100px 250px;
-    border-radius: 12px;
+    font-size: 35px;
+    height: 300px;
+    width: 70%;
+    border-radius: 20px; /* Abgerundete Ecken */
     transition: background-color 0.3s ease, color 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    padding: 10px; /* Platz für den inneren Rand */
+}
+
+.inner-button {
+    display: flex; /* Verwende Flexbox */
+    justify-content: center; /* Horizontale Zentrierung */
+    align-items: center; /* Vertikale Zentrierung */
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    height: 90%;
+    width: 90%;
+    border-radius: 15px; /* Abgerundete Ecken */
     position: relative;
     overflow: hidden;
 }
 
-/* Stile für den Text im Button */
 .button-text {
-    font-size: 40px;
-    display: inline-block; /* Um die Breite an den Text anzupassen */
-    text-align: center; /* Zentrierte Ausrichtung des Textes */
+    z-index: 2; /* Sicherstellen, dass der Text über dem GIF bleibt */
 }
 
 .giphy-embed {
@@ -86,6 +101,7 @@ main h1 {
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.3s ease;
+    z-index: 1; /* Sicherstellen, dass das GIF unter dem Text bleibt */
 }
 
 .calculate-button:hover .giphy-embed {

@@ -1,0 +1,97 @@
+/* Grundlegende Stile für den gesamten Body */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f9f9f9; /* Hintergrundfarbe des Body */
+}
+
+/* Hauptinhalt */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Zentriert den Inhalt horizontal */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Container für die bereits erfassten Personen */
+.person-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-self: flex-start;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.person-box {
+    background-color: #ffffff;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: calc(50% - 10px); /* Breite der Personen-Kästchen */
+    box-sizing: border-box;
+}
+
+.person-box h3 {
+    margin-top: 0;
+    font-size: 18px;
+    color: #333333;
+}
+
+.person-box ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.person-box ul li {
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+/* Zurück-Button */
+.back-btn {
+    position: absolute;
+    top: 20px; /* Abstand vom oberen Rand */
+    left: 20px; /* Abstand vom linken Rand */
+}
+
+.back-link {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #333333;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.back-link:hover {
+    background-color: #555555;
+}
+
+/* Button zum Hinzufügen neuer Personen */
+.add-person {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.add-person-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #333333;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-person-btn:hover {
+    background-color: #555555;
+}
